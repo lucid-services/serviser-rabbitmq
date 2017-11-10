@@ -25,7 +25,7 @@ function buildMQApp(config, options) {
  * @param {Object} [options] - see {@link AppInterface} constructor options
  * @return {App}
  */
-Service.Service.prototype.buildMQApp = function(name, options) {
+service.Service.prototype.buildMQApp = function(name, options) {
 
     let defaults = {name: name};
 

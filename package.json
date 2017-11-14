@@ -1,6 +1,6 @@
 {
   "name": "bi-service-rabbitmq",
-  "version": "0.1.0-dev.20171110.2",
+  "version": "0.1.0",
   "description": "The plugin integrates AMQP 0.9.1 with bi-service",
   "main": "index.js",
   "testFramework": "mocha",
@@ -15,6 +15,7 @@
   "license": "GPL-3.0",
   "files": [
     "lib",
+    "index.js",
     "LICENCE",
     "COPYRIGHT",
     "CHANGELOG.md"
@@ -28,7 +29,7 @@
     "bi-service": "^1.0.0-dev.20171110.3"
   },
   "dependencies": {
-    "bi-rabbitmq": "^0.5.0-dev.20171110",
+    "bi-rabbitmq": "^0.5.0",
     "lodash": "^4.16.2"
   },
   "devDependencies": {

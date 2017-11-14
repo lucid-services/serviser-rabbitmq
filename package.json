@@ -1,6 +1,6 @@
 {
   "name": "bi-service-rabbitmq",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The plugin integrates AMQP 0.9.1 with bi-service",
   "main": "index.js",
   "testFramework": "mocha",

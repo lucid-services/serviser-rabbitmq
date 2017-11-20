@@ -1,4 +1,8 @@
 
+## v0.1.3
+
+* [FIXED] - when `AMQP` connection string does not have any query tunning parameters, no "?" character should be appended
+
 ## v0.1.2
 
 * [ADDED] - `createConnection` helper method available on `module.exports` object

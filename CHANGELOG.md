@@ -1,5 +1,5 @@
 
-## FUTURE
+## v0.1.2
 
 * [ADDED] - `createConnection` helper method available on `module.exports` object
 * [ADDED] - support for optional amqp connection tunning parameters `frameMax` & `channelMax` & `heartbeat`

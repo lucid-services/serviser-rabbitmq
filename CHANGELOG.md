@@ -1,5 +1,5 @@
 
-## FUTURE
+## v0.1.3
 
 * [FIXED] - when `AMQP` connection string does not have any query tunning parameters, no "?" character should be appended
 

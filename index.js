@@ -1,5 +1,6 @@
 const _            = require('lodash');
 const service      = require('bi-service');
+const rabbit       = require('bi-rabbitmq');
 const App          = require('./lib/app.js');
 const Router       = require('./lib/router.js');
 const Route        = require('./lib/route.js');
@@ -44,3 +45,7 @@ module.exports.RouteType    = RouteType;
 module.exports.Request      = Request;
 module.exports.Response     = Response;
 module.exports.configSchema = configSchema;
+
+module.exports.createConnection = function createConnection(url, connOpts) {
+    return rabbit.createContext(url, connOpts);
+};

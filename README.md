@@ -10,12 +10,16 @@ Load the plugin at the bottom of your `index.js` file:
 require('bi-service-rabbitmq'); //loads the plugin
 ```
 
+Initialize a message queue App in your app.js file:
+
+```javascript
+service.buildMQApp('your-app-name-in-config.json5');
+```
+
 #### Example of `SUBSCRIBE` endpoint definition of `PUBLISH & SUBSCRIBE` pattern:
 
 
 ```javascript
-service.appManager.buildMQApp('your-app-name-in-config.json5');
-
 const router = service.appManager
     .get('your-app-name-in-config.json5')
     .buildRouter({

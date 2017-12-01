@@ -9,6 +9,8 @@ const route = router.buildRoute({
     amqp: {}
 });
 
+route.acceptsContentType('application/json');
+
 route.main(function(req, res) {
     res.json(req.body);
 });

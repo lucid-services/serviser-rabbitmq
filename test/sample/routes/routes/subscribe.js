@@ -10,4 +10,6 @@ const route = router.buildRoute({
     amqp: {}
 });
 
+route.acceptsContentType('application/json');
+
 route.main(sinon.spy());

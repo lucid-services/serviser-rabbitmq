@@ -18,13 +18,14 @@ describe('RABBITMQ', function() {
         const self = this;
         return service.listen().bind(this).then(function() {
             this.app = service.appManager.get('rabbit');
-            this.client = rabbit.createContext(this.app.$getBrokerURI());
+            //this.client = rabbit.createContext(this.app.$getBrokerURI());
+            this.client = this.app.connection;
 
-            return Promise.fromCallback(function(cb) {
-                self.client.on('ready', function(con) {
-                    cb();
-                });
-            });
+            //return Promise.fromCallback(function(cb) {
+                //self.client.on('ready', function(con) {
+                    //cb();
+                //});
+            //});
         });
     });
 

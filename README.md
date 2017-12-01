@@ -36,3 +36,10 @@ router.buildRoute({
     return User.update({email: req.body.email});
 });
 ```
+
+### Tests
+
+```bash
+> export AMQP_PARAMS='amqp://username:password@localhost:5672/vhost'
+> npm test
+```

@@ -40,6 +40,6 @@ router.buildRoute({
 ### Tests
 
 ```bash
-> export AMQP_PARAMS='amqp://username:password@localhost:5672/vhost'
+> export AMQP_URI='amqp://username:password@localhost:5672/vhost'
 > npm test
 ```

@@ -3,7 +3,7 @@ const url     = require('url');
 const config  = require('bi-config');
 const Service = require('bi-service').Service;
 
-const AMQP_PARAMS = process.env.AMQP_PARAMS || '';
+const AMQP_PARAMS = process.env.AMQP_URI || '';
 const params = url.parse(AMQP_PARAMS);
 
 const service = module.exports = new Service(config);

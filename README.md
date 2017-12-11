@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/BohemiaInteractive/bi-service-rabbitmq.svg?branch=master)](https://travis-ci.org/BohemiaInteractive/bi-service-rabbitmq)   
 
-Implementation of bi-service's `AppInterface` which allows to define receiving endpoints of `AMQP 0.9.1` in the same manner `http(s)` routes would be defined.
+Implementation of bi-service's `AppInterface` which allows to define receiving endpoints of `AMQP 0.9.1` in the same manner `http(s)` routes would be defined.  
+Uses [forked](https://github.com/BohemiaInteractive/bi-rabbitmq) [rabbit.js](https://github.com/squaremo/rabbit.js) library under the hood.
 
 ### Usage
 
@@ -36,6 +37,10 @@ router.buildRoute({
     return User.update({email: req.body.email});
 });
 ```
+
+#### Route `type`s
+
+as described under [socket types](http://www.squaremobius.net/rabbit.js/) section of `rabbit.js` documentation.
 
 ### Tests
 

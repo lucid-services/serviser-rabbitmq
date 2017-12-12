@@ -12,11 +12,7 @@ const configSchema = require('./lib/configSchema.js');
 service.AppManager.prototype.buildMQApp = buildMQApp;
 
 function buildMQApp(config, options) {
-    const app = new App(this, config, options);
-    this.add(app);
-    app.on('error', this.$buildAppErrorListener(app));
-    this.emit('build-app', app);
-    return app;
+    return this.$buildApp(App, config, options);
 }
 
 /**

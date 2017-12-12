@@ -1,4 +1,8 @@
 
+## v0.2.0
+
+* [FIXED] - provide own implementation of `App.prototype.close` method so that underlying amqp connection can be closed
+
 ## v0.1.3
 
 * [FIXED] - when `AMQP` connection string does not have any query tunning parameters, no "?" character should be appended

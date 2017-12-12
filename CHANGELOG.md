@@ -1,5 +1,5 @@
 
-## FUTURE
+## v0.2.0
 
 * [FIXED] - provide own implementation of `App.prototype.close` method so that underlying amqp connection can be closed
 

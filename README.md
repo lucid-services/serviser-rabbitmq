@@ -33,10 +33,31 @@ router.buildRoute({
     type: 'subscribe', // one of: subscribe|pull|reply|worker
     summary: 'Sync user email',
     amqp: {/*amqp specific options*/},
+    sdkMethodName: 'email-updated'
 }).main(function(req) {
     return User.update({email: req.body.email});
 });
 ```
+
+#### `PUBLISH` data on client side:
+
+```javascript
+//bi-service based project...
+const rabbit           = require('bi-rabbitmq');
+const remoteServiceMgr = service.getRemoteServiceManager();
+const resourceManager  = service.resourceManager;
+
+const amqp = rabbit.createConnection('amqp://username:password@localhost:5672/vhost');
+
+resourceManager.register('amqp', amqp);
+
+const sdk = remoteServiceMgr.buildRemoteService('user:<your-app-name>:v1.0', {socket: amqp});
+const socket = sdk.get('email-updated');
+
+socket.write('new@email.com');
+```
+
+See [client SDKs integration](https://bohemiainteractive.github.io/bi-service/tutorial-4.SDK-integration.html)
 
 #### Route `type`s
 

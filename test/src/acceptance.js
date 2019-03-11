@@ -3,8 +3,8 @@ const _         = require('lodash');
 const chai      = require('chai');
 const sinonChai = require("sinon-chai");
 const sinon     = require('sinon');
-const Service   = require('bi-service');
-const rabbit    = require('bi-rabbitmq');
+const Service   = require('serviser');
+const rabbit    = require('serviser-rabbit');
 const service   = require('../sample/index.js');
 
 const expect = chai.expect;

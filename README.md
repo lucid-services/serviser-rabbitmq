@@ -1,14 +1,14 @@
-[![Build Status](https://travis-ci.org/BohemiaInteractive/bi-service-rabbitmq.svg?branch=master)](https://travis-ci.org/BohemiaInteractive/bi-service-rabbitmq)   
+[![Build Status](https://travis-ci.org/lucid-services/serviser-rabbitmq.svg?branch=master)](https://travis-ci.org/lucid-services/serviser-rabbitmq)   
 
-Implementation of bi-service's `AppInterface` which allows to define receiving endpoints of `AMQP 0.9.1` in the same manner `http(s)` routes would be defined.  
-Uses [forked](https://github.com/BohemiaInteractive/bi-rabbitmq) [rabbit.js](https://github.com/squaremo/rabbit.js) library under the hood.
+Implementation of serviser's `AppInterface` which allows to define receiving endpoints of `AMQP 0.9.1` in the same manner `http(s)` routes would be defined.  
+Uses [forked](https://github.com/lucid-services/serviser-rabbit) [rabbit.js](https://github.com/squaremo/rabbit.js) library under the hood.
 
 ### Usage
 
 Load the plugin at the bottom of your `index.js` file:
 
 ```javascript
-require('bi-service-rabbitmq'); //loads the plugin
+require('serviser-rabbitmq'); //loads the plugin
 ```
 
 Initialize a message queue App in your app.js file:
@@ -42,8 +42,8 @@ router.buildRoute({
 #### `PUBLISH` data on client side:
 
 ```javascript
-//bi-service based project...
-const rabbit           = require('bi-rabbitmq');
+//serviser based project...
+const rabbit           = require('serviser-rabbit');
 const remoteServiceMgr = service.getRemoteServiceManager();
 const resourceManager  = service.resourceManager;
 
@@ -57,7 +57,7 @@ const socket = sdk.get('email-updated');
 socket.write('new@email.com');
 ```
 
-See [client SDKs integration](https://bohemiainteractive.github.io/bi-service/tutorial-4.SDK-integration.html)
+See [client SDKs integration](https://lucid-services.github.io/serviser/tutorial-4.SDK-integration.html)
 
 #### Route `type`s
 

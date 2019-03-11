@@ -1,4 +1,8 @@
 
+## v0.2.1
+
+* [CHANGED] - changed project name to `serviser-rabbitmq`
+
 ## v0.2.0
 
 * [FIXED] - provide own implementation of `App.prototype.close` method so that underlying amqp connection can be closed

@@ -1,7 +1,7 @@
 'use strict';
 const url     = require('url');
-const config  = require('bi-config');
-const Service = require('bi-service').Service;
+const config  = require('serviser-config');
+const Service = require('serviser').Service;
 
 const AMQP_PARAMS = process.env.AMQP_URI || '';
 const params = url.parse(AMQP_PARAMS);

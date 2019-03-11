@@ -1,12 +1,12 @@
 {
-  "name": "bi-service-rabbitmq",
-  "version": "0.2.0",
-  "description": "Integrates AMQP 0.9.1 with bi-service",
+  "name": "serviser-rabbitmq",
+  "version": "0.2.1",
+  "description": "Integrates AMQP 0.9.1 with serviser",
   "main": "index.js",
   "testFramework": "mocha",
-  "author": "Bohemia Interactive",
+  "author": "fogine",
   "contributors": [
-    "fogine <TODO>"
+    "fogine"
   ],
   "private": false,
   "engines": {
@@ -26,14 +26,14 @@
     "test": "npm run tests"
   },
   "peerDependencies": {
-    "bi-service": ">=1.0.0-rc"
+    "serviser": ">=1.0.0-rc"
   },
   "dependencies": {
-    "bi-rabbitmq": "^0.5.0",
+    "serviser-rabbit": "^0.5.2",
     "lodash": "^4.16.2"
   },
   "devDependencies": {
-    "bi-service": "^1.0.0-rc",
+    "serviser": "^2.0.0",
     "chai": "^3.5.0",
     "chai-as-promised": "^5.3.0",
     "istanbul": "^0.4.3",

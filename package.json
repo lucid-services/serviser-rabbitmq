@@ -1,6 +1,6 @@
 {
   "name": "serviser-rabbitmq",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Integrates AMQP 0.9.1 with serviser",
   "main": "index.js",
   "testFramework": "mocha",
